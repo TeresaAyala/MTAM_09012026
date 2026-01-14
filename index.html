@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica Desarrollo Web</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+header {
+    background: #1fa2d6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+.img-header {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+
+}
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+}
+
+/* Menú */
+.menu {
+    width: 20%;
+    background: #6b8f71;
+    padding: 20px;
+}
+
+/* Formularios */
+.formulario {
+    width: 40%;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.img-formulario {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* Botones */
+.btn-multi {
+    background: green;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.btn-registro {
+    background: red;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: #1fa2d6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.formulario:first-of-type {
+    border-right: 7px solid green;
+    padding-right: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Maria Teresa Ayala Martinez</h1>
+    <img src="img/user.png" class="img-header">
+</header>
+
+<main class="contenedor">
+
+    <!-- Menú -->
+    <aside class="menu">
+        <p>Menu 1</p>
+        <p>Menu 2</p>
+    </aside>
+
+    <!-- Formulario multiplicar -->
+    <section class="formulario">
+        <h3>Formulario para Multiplicar</h3>
+
+        <label>Número 1</label>
+        <input type="number" id="num1">
+
+        <label>Número 2</label>
+        <input type="number" id="num2">
+
+        <button class="btn-multi" onclick="multiplicar()">Multiplicar</button>
+
+        <label>Resultado</label>
+        <input type="text" id="resultado" disabled>
+
+        <label>Fecha actual</label>
+        <input type="text" id="fecha" disabled>
+    </section>
+
+    <!-- Formulario registro -->
+    <section class="formulario">
+        <h3>Formulario de registro personal</h3>
+
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+
+        <label>Apellido</label>
+        <input type="text" id="apellido">
+
+        <button class="btn-registro" onclick="registrar()">Registrar</button>
+
+        <label>Nombre completo</label>
+        <input type="text" id="nombreCompleto" disabled>
+
+          <img src="img/user.png" class="img-formulario">
+
+    </section>
+
+  
+</main>
+
+<footer>
+    Derechos reservados a Maria Teresa Ayala Martinez
+</footer>
+
+<script>
+
+    /* ---------- FORMULARIO MULTIPLICAR ---------- */
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const resultado = document.getElementById("resultado");
+
+function multiplicar() {
+    let res = num1.value * num2.value;
+    resultado.value = res;
+}
+
+</script>
+
+</body>
+</html>
