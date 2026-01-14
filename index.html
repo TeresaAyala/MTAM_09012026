@@ -189,6 +189,21 @@ function registrar() {
         
 }
 
+/* ---------- FECHA ACTUAL (ASINCRONÍA) ---------- */
+function obtenerFecha(callback) {
+
+     const ahora = new Date();
+    callback(ahora.toLocaleString());
+
+    setInterval(() => {
+        const ahora = new Date();
+        callback(ahora.toLocaleString());
+    }, 1000);
+}
+
+obtenerFecha(function(fecha) {
+    document.getElementById("fecha").value = fecha;
+});
 </script>
 
 </body>
