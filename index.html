@@ -186,6 +186,7 @@ function registrar() {
     const persona = new Persona(nombre, apellido);
     document.getElementById("nombreCompleto").value =
         persona.getNombreCompleto();
+        
 }
 
 /* ---------- FECHA ACTUAL (ASINCRONÍA) ---------- */
@@ -203,7 +204,6 @@ function obtenerFecha(callback) {
 obtenerFecha(function(fecha) {
     document.getElementById("fecha").value = fecha;
 });
-
 </script>
 
 </body>
