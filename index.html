@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <title>Práctica Desarrollo Web</title>
     <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;  
 }
 
 /* Encabezado */
@@ -91,6 +96,53 @@ footer {
     border-right: 7px solid green;
     padding-right: 20px;
 }
+
+/* =============================== */
+/* Media query*/
+/* =============================== */
+
+@media (min-width: 1200px) {
+    .contenedor {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .menu, .formulario {
+        width: 100%;
+    }
+
+    .formulario:first-of-type {
+        border-right: none;
+        border-bottom: 7px solid green;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .img-header {
+        height: 40px;
+        right: 10px;
+    }
+
+    .btn-multi,
+    .btn-registro {
+        width: 100%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
 
     </style>
 </head>
