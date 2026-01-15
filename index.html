@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Práctica Desarrollo Web</title>
+
     <style>
+
+        * {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;  
 }
 
 /* Encabezado */
@@ -92,6 +99,52 @@ footer {
     padding-right: 20px;
 }
 
+/* =============================== */
+/* Media query*/
+/* =============================== */
+
+@media (min-width: 1200px) {
+    .contenedor {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .menu, .formulario {
+        width: 100%;
+    }
+
+    .formulario:first-of-type {
+        border-right: none;
+        border-bottom: 7px solid green;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .img-header {
+        height: 40px;
+        right: 10px;
+    }
+
+    .btn-multi,
+    .btn-registro {
+        width: 100%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 
@@ -155,19 +208,6 @@ footer {
     Derechos reservados a Maria Teresa Ayala Martinez
 </footer>
 
-<script>
-
-    /* ---------- FORMULARIO MULTIPLICAR ---------- */
-const num1 = document.getElementById("num1");
-const num2 = document.getElementById("num2");
-const resultado = document.getElementById("resultado");
-
-function multiplicar() {
-    let res = num1.value * num2.value;
-    resultado.value = res;
-}
-
-</script>
 
 </body>
 </html>
